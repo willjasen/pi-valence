@@ -18,3 +18,7 @@ sudo ln -s $PWD/iptables /etc/network/if-up.d/iptables
 # Save iptables rule
 sudo chown root:root /etc/network/if-up.d/iptables
 sudo chmod 755 /etc/network/if-up.d/iptables
+
+# Start apps
+sudo service dhcpcd restart
+sudo service hostapd restart
