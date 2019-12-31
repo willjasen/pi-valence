@@ -21,4 +21,7 @@ sudo chmod 755 /etc/network/if-up.d/iptables
 
 # Start apps
 sudo service dhcpcd restart
-sudo service hostapd restart
+sudo systemctl reload dnsmasq
+sudo systemctl unmask hostapd
+sudo systemctl enable hostapd
+sudo systemctl start hostapd
